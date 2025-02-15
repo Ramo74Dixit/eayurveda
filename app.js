@@ -20,6 +20,6 @@ app.use('/api',userroutes);
 app.use("/api",sellerroutes);
 app.use("/api",productroutes);
 app.use("/api",orderroutes);
-app.listen(3000,()=>{
+app.listen(8080,()=>{
     console.log('Server is running on port 3000');
 })
