@@ -1,7 +1,7 @@
 // Basic Setup of Express Js
 const connectDB = require("./config/db")
 const express = require('express');
-
+const cors=require('cors')
 const userroutes=require("./routes/userRoutes")
 const sellerroutes=require("./routes/sellerRoutes")
 const productroutes=require("./routes/productRoutes")
@@ -10,7 +10,7 @@ require('dotenv').config();
 // reference to express
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 // call this function for connection
 connectDB();
 app.get('/',(req,res)=>{
